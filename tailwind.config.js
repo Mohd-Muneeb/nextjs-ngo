@@ -3,9 +3,16 @@ module.exports = {
 	content: [
 		"./pages/**/*.{js,jsx,ts,tsx}",
 		"./components/**/*.{js,jsx,ts,tsx}",
+		"./node_modules/tw-elements/dist/js/**/*.js",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				inter: ["Inter"],
+				fredoka: ["Fredoka"],
+			},
+		},
 	},
-	plugins: [],
+	plugins: [require("tw-elements/dist/plugin")],
+	important: true,
 };
